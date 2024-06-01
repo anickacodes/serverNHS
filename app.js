@@ -3,10 +3,11 @@ const express = require("express");
 const morgan = require("morgan");
 const app = express();
 // const session = require("express-session");
-
+const categoryController = require("./controllers/categoryController")
 app.use(cors());
 app.use(express.json());
 app.use(morgan("tiny"));
+app.use("/category", categoryController);
 // app.use(express.urlencoded({extended: true}))
 
 // app.use(
@@ -17,9 +18,10 @@ app.use(morgan("tiny"));
 //   })
 // );
 
-
 app.get("/", (req, res) => {
-  res.send(`<main><h3><section><p>'Server side storage for CLN Styles'</p></section></h3></main>`);
+  res.send(
+    `<main><h3><section><p>Server side storage for CLN Styles</p></section></h3></main>`
+  );
 });
 
 // const styleController = require("./controllers/styleController.js");
@@ -34,7 +36,7 @@ app.get("/", (req, res) => {
 //   }));
 
 app.get("*", (req, res) => {
-  res.status(404).send("404 ERROR Page not found");
+  res.status(404).send("Page not found");
 });
 
 module.exports = app;
