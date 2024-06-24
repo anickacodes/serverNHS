@@ -4,39 +4,18 @@ CREATE DATABASE clnstyles;
 
 \c clnstyles;
 
-CREATE TABLE
-    category (
-        id serial primary key,
-        service text not null,
-        description text not null
-    );
+CREATE TABLE category (
+    id serial PRIMARY KEY,
+    service text NOT NULL,
+    description text NOT NULL
+);
 
-CREATE TABLE
-    kids_styles (
-        id serial primary key,
-        price int,
-        name text not null,
-        description text not null,
-        image_url text,
-        duration text
-    );
-
-CREATE TABLE
-    natural_styles (
-        id serial primary key,
-        price int,
-        name text not null,
-        description text not null,
-        image_url text,
-        duration text
-    );
-
-CREATE TABLE
-    extensions_styles (
-        id serial primary key,
-        price int,
-        name text not null,
-        description text not null,
-        image_url text,
-        duration text
-    );
+CREATE TABLE styles (
+    id serial PRIMARY KEY,
+    price int,
+    name text NOT NULL,
+    description text NOT NULL,
+    image_url text,
+    duration text,
+    category_id int REFERENCES category(id)
+);
