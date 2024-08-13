@@ -1,5 +1,4 @@
 \c clnstyles;
-
 insert into
     category (service, description)
 values
@@ -15,8 +14,8 @@ values
     ('Color', 'Lightener & deposit colors'),
     ('Products', 'Add-ons not found elsewhere');
 
-insert into
 -- kids services
+insert into
     styles (
         category_id,
         name,
@@ -83,8 +82,8 @@ values
         '25 minutes'
     );
 
-insert into
 -- natural services
+insert into
     styles (
         category_id,
         name,
@@ -159,8 +158,9 @@ values
         '45 minutes'
     );
 
+ -- extension services
+
 insert into
--- extension services
     styles (
         category_id,
         name,
@@ -219,21 +219,182 @@ values
         '260 minutes'
     );
 
-INSERT INTO styles (name, price, description, image_url, duration, category_id) VALUES
 -- Color services
-('Single Process Lightener', 50.00, 'Lightens hair in a single process', 'https://example.com/single_process_lightener.jpg', 60, 4),
-('Double Process Lightener', 90.00, 'Lightens hair in two processes for a more dramatic effect', 'https://example.com/double_process_lightener.jpg', 180, 4),
-('Single Process Toner', 45.00, 'Tones hair in a single process', 'https://example.com/single_process_toner.jpg', 90, 4),
-('Highlights Half Head', 45.00, 'Adds highlights to half of the head', 'https://example.com/highlights_half_head.jpg', 150, 4),
-('Highlights Full Head', 90.00, 'Adds highlights to the full head', 'https://example.com/highlights_full_head.jpg', 180, 4),
-('Full Head Single Color Deposit', 55.00, 'Deposits a single color to the full head', 'https://example.com/full_head_single_color_deposit.jpg', 70, 4),
-('Half Head Single Color Deposit', 35.00, 'Deposits a single color to half of the head', 'https://example.com/half_head_single_color_deposit.jpg', 45, 4),
-('Full Head Multi-Color Deposit', 80.00, 'Deposits multiple colors to the full head', 'https://example.com/full_head_multi_color_deposit.jpg', 90, 4),
-('Half Head Multi-Color Deposit', 30.00, 'Deposits multiple colors to half of the head', 'https://example.com/half_head_multi_color_deposit.jpg', 50, 4);
+INSERT INTO
+    styles (
+        name,
+        price,
+        description,
+        image_url,
+        duration,
+        category_id
+    )
+VALUES
+    (
+        'Single Process Lightener',
+        50.00,
+        'Lightens hair in a single process',
+        'https://example.com/single_process_lightener.jpg',
+        60,
+        4
+    ),
+    (
+        'Double Process Lightener',
+        90.00,
+        'Lightens hair in two processes for a more dramatic effect',
+        'https://example.com/double_process_lightener.jpg',
+        180,
+        4
+    ),
+    (
+        'Single Process Toner',
+        45.00,
+        'Tones hair in a single process',
+        'https://example.com/single_process_toner.jpg',
+        90,
+        4
+    ),
+    (
+        'Highlights Half Head',
+        45.00,
+        'Adds highlights to half of the head',
+        'https://example.com/highlights_half_head.jpg',
+        150,
+        4
+    ),
+    (
+        'Highlights Full Head',
+        90.00,
+        'Adds highlights to the full head',
+        'https://example.com/highlights_full_head.jpg',
+        180,
+        4
+    ),
+    (
+        'Full Head Single Color Deposit',
+        55.00,
+        'Deposits a single color to the full head',
+        'https://example.com/full_head_single_color_deposit.jpg',
+        70,
+        4
+    ),
+    (
+        'Half Head Single Color Deposit',
+        35.00,
+        'Deposits a single color to half of the head',
+        'https://example.com/half_head_single_color_deposit.jpg',
+        45,
+        4
+    ),
+    (
+        'Full Head Multi-Color Deposit',
+        80.00,
+        'Deposits multiple colors to the full head',
+        'https://example.com/full_head_multi_color_deposit.jpg',
+        90,
+        4
+    ),
+    (
+        'Half Head Multi-Color Deposit',
+        30.00,
+        'Deposits multiple colors to half of the head',
+        'https://example.com/half_head_multi_color_deposit.jpg',
+        50,
+        4
+    );
 
-INSERT INTO styles (name, price, description, image_url, duration, category_id) VALUES
 -- Products
-('Deep Conditioning Service', 25.00, 'Intensive deep conditioning treatment to repair and nourish hair', 'https://example.com/deep_conditioning.jpg', 25, 5),
-('ACV Rinse', 10.00, 'Apple Cider Vinegar rinse for a healthy scalp and hair', 'https://example.com/acv_rinse.jpg', 5, 5),
-('CLN Stylez Love Oil', 10.00, 'Nourishing oil for hair, 1oz bottle', 'https://example.com/cln_love_oil.jpg', 0, 5);
+INSERT INTO
+    styles (
+        name,
+        price,
+        description,
+        image_url,
+        duration,
+        category_id
+    )
+VALUES
+    (
+        'Deep Conditioning Service',
+        25.00,
+        'Intensive deep conditioning treatment to repair and nourish hair',
+        'https://example.com/deep_conditioning.jpg',
+        25,
+        5
+    ),
+    (
+        'ACV Rinse',
+        10.00,
+        'Apple Cider Vinegar rinse for a healthy scalp and hair',
+        'https://example.com/acv_rinse.jpg',
+        5,
+        5
+    ),
+    (
+        'CLN Stylez Love Oil',
+        10.00,
+        'Nourishing oil for hair, 1oz bottle',
+        'https://example.com/cln_love_oil.jpg',
+        0,
+        5
+    );
 
+INSERT INTO
+    clients (
+        name,
+        address,
+        contact_number,
+        email,
+        date_of_birth,
+        preferred_contact_method,
+        notes,
+        style_id
+    )
+VALUES
+    (
+        'Alice Johnson',
+        '123 Maple Street, Anytown, NY',
+        '555-1234',
+        'alice.johnson@example.com',
+        '1985-06-15',
+        'Email',
+        'Prefers morning appointments',
+        1
+    ),
+    (
+        'Carol Davis',
+        '789 Pine Road, Anytown, NY',
+        '555-8765',
+        'carol.davis@example.com',
+        '1978-04-02',
+        'Email',
+        'Likes to schedule a month in advance',
+        3
+    );
+
+-- INSERT INTO
+--     bookings (
+--         client_id,
+--         style_id,
+--         booking_date,
+--         appointment_time,
+--         status,
+--         notes
+--     )
+-- VALUES
+    -- (
+    --     2,
+    --     2,
+    --     '2024-08-16',
+    --     '14:30:00',
+    --     'pending',
+    --     'Regular client, prefers afternoon appointments'
+    -- ),
+    -- (
+    --     3,
+    --     3,
+    --     '2024-08-17',
+    --     '11:00:00',
+    --     'confirmed',
+    --     'Request for special treatment due to sensitive skin'
+    -- );

@@ -19,3 +19,25 @@ CREATE TABLE styles (
     duration text,
     category_id int REFERENCES category(id)
 );
+
+create table clients (
+    id serial primary key,
+    name text not null,
+    address varchar(150),
+    contact_number VARCHAR(20),
+    email VARCHAR(100),
+    date_of_birth DATE,
+    preferred_contact_method TEXT,
+    notes TEXT,
+    style_id INT REFERENCES styles(id)
+);
+
+-- CREATE TABLE bookings (
+--     id SERIAL PRIMARY KEY,
+--     client_id INT REFERENCES clients(id),
+--     style_id INT REFERENCES styles(id),
+--     booking_date DATE NOT NULL,
+--     appointment_time TIME NOT NULL,
+--     status TEXT NOT NULL DEFAULT 'pending',
+--     notes TEXT
+-- );
