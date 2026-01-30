@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS clnstyles;
+DROP DATABASE IF EXISTS clnstylez;
 
-CREATE DATABASE clnstyles;
+CREATE DATABASE clnstylez;
 
-\c clnstyles;
+\c clnstylez;
 
 CREATE TABLE category (
     id serial PRIMARY KEY,
