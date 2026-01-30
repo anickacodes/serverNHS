@@ -24,7 +24,7 @@ app.use("/styles", stylesController);
 
 app.get("/", (req, res) => {
   res.send(
-    `<main><h3><section><p>Server side storage for CLN Styles</p></section></h3></main>`
+    `<h3><section><p>Server side storage for CLN Styles</p></section></h3>`
   );
 });
 

@@ -1,5 +1,4 @@
-\c clnstylez;
-
+-- \c clnstylez;
 insert into
     category (service, description)
 values
